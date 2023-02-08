@@ -1,0 +1,10 @@
+---
+- name: Install Python on EC2 instance
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Install Python
+      become: yes
+      apt:
+        name: python3
+        state: present
